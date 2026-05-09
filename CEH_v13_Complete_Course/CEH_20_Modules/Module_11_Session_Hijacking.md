@@ -1,0 +1,134 @@
+# CEH Module 11 — Session Hijacking
+
+## Module Overview
+**Module 11: Session Hijacking** is an official EC-Council CEH v13 module covering: session token theft, cross-site scripting cookie theft, packet sniffing sessions, TCP session hijacking sequence numbers, CSRF, cookie attributes HttpOnly Secure SameSite, token fixation.
+
+**Maps to course days:** Days 22, 23
+
+---
+## Key Concepts & Definitions
+
+This module introduces the following core concepts that are directly tested on the CEH exam:
+
+**Primary topics:** session token theft, cross-site scripting cookie theft, packet sniffing sessions, TCP session hijacking sequence numbers, CSRF, cookie attributes HttpOnly Secure SameSite, token fixation
+
+For each concept, understand:
+- **Definition** — What it is in plain English
+- **Mechanism** — How it works technically  
+- **Attack use** — How attackers exploit it
+- **Defense** — How defenders detect/prevent it
+
+### Concept Deep Dive
+
+The topics in this module (session token theft, cross-site scripting cookie theft, packet sniffing sessions, TCP session hijacking sequence numbers, CSRF, cookie attributes HttpOnly Secure SameSite, token fixation) build on each other sequentially. Review the corresponding day notes for full explanations, ASCII diagrams, and comparison tables.
+
+**Key relationships:**
+- Each tool in this module has a specific use case — know when to use each
+- Each attack technique has a corresponding defensive control
+- Each protocol weakness has a specific CVE category (check NVD for examples)
+
+---
+## Tools Covered in This Module
+
+**Primary tools:** burpsuite, tcpdump, xss payload document.cookie
+
+### Syntax Reference
+
+```bash
+# Tools for Module 11: Session Hijacking
+burpsuite, tcpdump, xss payload document.cookie
+
+# General usage pattern:
+# tool [options] [target]
+# Always check: tool --help for full flag list
+```
+
+### Tool Comparison
+
+| Tool | Purpose | When to Use | Key Flag |
+|------|---------|------------|---------|
+| (See tools list above) | Refer to day notes | Based on target/objective | -h for help |
+
+---
+## CEH Exam Question Areas
+
+**High-frequency exam topics for Module 11:**
+1. Definitions and distinctions between related terms
+2. Tool selection for specific scenarios
+3. Protocol mechanics and vulnerability exploitation
+4. Defensive countermeasures and detection methods
+5. Legal and ethical considerations
+
+**Common question formats:**
+- "Which tool is BEST suited for..."
+- "An attacker wants to... which technique?"
+- "What is the PRIMARY difference between X and Y?"
+- "Which of the following is NOT a characteristic of..."
+
+---
+## Practice Questions with Answers
+
+**Q1:** Session fixation differs from session hijacking because: A) It captures existing tokens B) It forces user to use attacker-chosen token before authentication C) It requires MitM D) It only works on HTTP
+
+**Answer:** B) It forces user to use attacker-chosen token before authentication
+
+**Explanation:** This is a core concept tested in Module 11. Know the exact definition and be able to distinguish it from similar options.
+
+---
+
+**Q2:** HttpOnly cookie flag prevents: A) CSRF attacks B) JavaScript from accessing the cookie C) Replay attacks D) Brute force
+
+**Answer:** B) JavaScript from accessing the cookie
+
+**Explanation:** CEH exam frequently tests tool knowledge and scan/attack type identification. Memorize which tool does what and which flag triggers which behavior.
+
+---
+
+**Q3:** Which attack steals session cookies via malicious script injection? A) CSRF B) SQLi C) XSS D) SSRF
+
+**Answer:** C) XSS
+
+**Explanation:** Scenario-based questions require applying conceptual knowledge. Always eliminate obviously wrong answers first, then distinguish between the two most plausible options.
+
+---
+## Quick Reference Cheatsheet
+
+```bash
+# ── MODULE 11: SESSION HIJACKING ──────────────────────────────
+# Topics: session token theft, cross-site scripting cookie theft, packet sniffing sessions, TCP session hijacking sequence numbers, CSRF, cookie attributes HttpOnly Secure SameSite, token fixation
+# Tools:  burpsuite, tcpdump, xss payload document.cookie
+
+# Core commands:
+# (See practical.md for days: Days 22, 23)
+
+# Nmap for this module:
+nmap -sV -sC --script default 192.168.56.102
+
+# Save all output:
+command 2>&1 | tee module11_output.txt
+
+# Reference CVEs: Search NVD for terms in this module
+# Reference TTP: Search MITRE ATT&CK for technique names
+```
+
+### Key Terms Glossary
+
+Review all terms in: **session token theft, cross-site scripting cookie theft, packet sniffing sessions, TCP session hijacking sequence numbers, CSRF, cookie attributes HttpOnly Secure SameSite, token fixation**
+
+For the CEH exam, be able to:
+- Define each term in one sentence
+- Give a real-world example
+- Identify the correct tool or defense
+
+---
+## Mapping to Daily Course Content
+
+| Day | Topic | Module 11 Connection |
+|-----|-------|------------------------|
+| Days 22 | See course calendar | Primary coverage |
+| 23 | See course calendar | Extended coverage |
+
+**Study sequence:** Read notes.md for the mapped days before reviewing this module file. The daily notes provide the detailed technical content; this module file provides the exam-focused synthesis.
+
+---
+*Module 11 of 20 | CEH v13 | Review with MASTER_NOTES.md for complete exam prep*
